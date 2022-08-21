@@ -26,7 +26,6 @@ function markUp(pic) {
     .join('');
 }
 
-const renderPic = markUp(galleryItems);
-gallery.insertAdjacentHTML('beforeEnd', renderPic);
-console.log(renderPic);
+gallery.insertAdjacentHTML('beforeEnd', markUp(galleryItems));
+
 new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 300 });
